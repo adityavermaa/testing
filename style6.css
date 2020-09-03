@@ -1,0 +1,292 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* left: -16px; */
+    left: 0;
+    z-index: 1030;
+}
+.img-fluid {
+    max-width: 100%;
+    padding-right: 4px;
+    height: auto;
+}
+
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-sizing:cover;
+    background-size: cover;
+}
+.carousel-caption{
+    bottom: 13px;
+}
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+.carousel-caption p{
+    width: 75%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+.navbar-light .navbar-brand {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-right: 3px;
+    padding: 0.3125rem;
+    top: 0px;
+    height: 63px;
+    padding-left: 0px;
+    
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    color: white;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+.navbar::before{
+    content: "";
+    background-color:black;
+    position: absolute;
+    height: 100%;
+    width: 200%;
+    z-index: -1;
+    opacity: .4;
+    left: -20px;
+    
+    
+}
+/* Code for the hover over the e-Laborate STARTS  */
+
+ .lnk{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #00ffff;
+    letter-spacing: 5px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.1s;
+    height: 28px;
+    top: 100px;
+    background-color:transparent;
+        
+}
+
+.lnk span{
+    position: absolute;
+    display: block;
+}
+.lnk span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00ffff );
+}
+.lnk:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+    
+}
+
+
+.lnk span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3.5px;
+    background: linear-gradient(270deg, transparent, rgb(255, 0, 200) );
+}
+.lnk:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+}  
+
+/* Code for the hover over the e-Laborate ENDS  */
+/* Code for the hover over the Navbar Menu STARTS */
+
+ul{
+    /* margin: 30px 20px; */
+    padding: 0;
+    display: flex;
+}
+ul li{
+    list-style: none;
+    padding: 4px 10px;
+    
+}
+ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #262626;
+    position: relative;
+    font-weight: bolder;
+}
+ul li a:before{
+    content: "";
+    width: 0;
+    height: 3.5px;
+    background-color: rgb(255, 0, 200);
+    position: absolute;
+    top: 120%;
+    left: 0;
+    transition: .5s;
+    mix-blend-mode: hard-light;
+    
+
+
+}
+ul li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #00ffff;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    transition: .5s;
+    mix-blend-mode: hard-light;
+    
+}
+ul li:hover a:before{
+    width: 50%;
+    transform: translateX(100%);
+    
+}
+
+ul li:hover a:after{
+    width: 50%;
+    transform: translateX(-100%);
+
+}
+
+/* Code for the hover over the Navbar Menu ENDS */
+
+/* Code for the Hamburger Button STARTS */
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    background-color: #a0a0a0;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    background-color: #a0a0a0;
+}
+/* Code for the Hamburger button ENDS */
+
+/* CSS for the Expand and Collapse Card START */
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:900');
+.compliancewith{
+  display: flex;
+  justify-content: center;
+}
+
+/* @media (max-width: 1000px) {
+  body {
+    display: block;
+  }
+} */
+.card {
+  /* display: flex; */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  cursor: pointer;
+  height: 317px;
+  margin: 10px;
+  padding: 0 10px;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.025);
+  text-align: center;
+  transition: height 1000ms;
+  width: 260px;
+}
+@media (max-width: 1000px) {
+  .card {
+    left: calc(50% - 20px);
+    transform: translateX(-50%);   
+    
+  }
+}
+.card.expanded {
+  height: 400px;
+}
+.label {
+  margin-top: 30px;
+  transform: translateY(10px);
+  transition: transform 1000ms;
+}
+.card.expanded .label {
+  transform: translateY(0);
+}
+.text1 {
+  clip-path: polygon(0% 100%, 0 -90%, 50% -5%, 100% -90%, 100% 100%);
+  -webkit-clip-path: polygon(0% 100%, 0 -90%, 50% -5%, 100% -90%, 100% 100%);
+  transition: clip-path 1000ms;
+}
+.card.expanded .text1 {
+  clip-path: polygon(0% 100%, 0 -100%, 50% -15%, 100% -100%, 100% 100%);
+  -webkit-clip-path: polygon(0% 100%, 0 -100%, 50% -15%, 100% -100%, 100% 100%);
+}
+.text2 {
+  clip-path: polygon(0% 100%,0% -80%,15% -70%,17.23% -53.59%,23% -40%,27.23% -28.94%,35% -20%,41.09% -13.59%,50% -10%,58.91% -13.23%,65% -20%,72.77% -28.23%,77% -40%,82.77% -54.65%,85% -70%,100% -80%,100% 100%);
+  -webkit-clip-path: polygon(0% 100%,0% -80%,15% -70%,17.23% -53.59%,23% -40%,27.23% -28.94%,35% -20%,41.09% -13.59%,50% -10%,58.91% -13.23%,65% -20%,72.77% -28.23%,77% -40%,82.77% -54.65%,85% -70%,100% -80%,100% 100%);
+  transition: clip-path 1000ms;
+}
+.card.expanded .text2 {
+  clip-path: polygon(0% 100%,0% -90%,15% -80%,17.23% -63.59%,23% -50%,27.23% -38.94%,35% -30%,41.09% -23.59%,50% -20%,58.91% -23.23%,65% -30%,72.77% -38.23%,77% -50%,82.77% -64.65%,85% -80%,100% -90%,100% 100%);
+  -webkit-clip-path: polygon(0% 100%,0% -90%,15% -80%,17.23% -63.59%,23% -50%,27.23% -38.94%,35% -30%,41.09% -23.59%,50% -20%,58.91% -23.23%,65% -30%,72.77% -38.23%,77% -50%,82.77% -64.65%,85% -80%,100% -90%,100% 100%);
+}
+.text-content {
+  transform: translateY(-160px);
+  transition: transform 1000ms;
+}
+.card.expanded .text-content {
+  transform: translateY(-5px);
+}
+.chevron {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 15px);
+  transform-origin: 50%;
+  transform: rotate(180deg);
+  transition: transform 100ms;
+}
+.card.expanded .chevron {
+  transform: rotate(0deg);
+}
+.title {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 900;
+  margin: 20px 0 12px;
+}
+.body-text {
+  padding: 0 20px;
+}
+
+/* CSS for the Expand and Collapse Card ENDS */

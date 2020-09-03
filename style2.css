@@ -1,0 +1,73 @@
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+/* Navigation Bar */
+#navbar{
+    display: flex;  
+    align-items: center;
+    position: relative;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .4;
+}
+/* Navigation bar: logo and image */
+#logo{
+    margin: 10px 34px;
+}
+#logo img{
+    margin: 3px 5px;
+    height: 59px;
+}
+/* Navigation bar: list styling */
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    color: white;
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    display: block;   /* Display is "block" because it is by default inline */
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+}
+#navbar ul li a:hover{
+    color: black;
+    background: white;
+    /* border: 2px solid red; */
+
+}
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    background-image: url("1st.jpg");
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .2;
+
+}

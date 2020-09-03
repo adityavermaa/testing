@@ -1,0 +1,280 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* left: -16px; */
+    left: 0;
+    z-index: 1030;
+}
+.img-fluid {
+    max-width: 100%;
+    padding-right: 4px;
+    height: auto;
+}
+
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-sizing:cover;
+    background-size: cover;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    color: black;
+}
+.carousel-caption p {
+    width: 75%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+    color: black;
+}
+
+.navbar-light .navbar-brand {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-right: 3px;
+    padding: 0.3125rem;
+    top: 0px;
+    height: 63px;
+    padding-left: 0px;
+    
+}
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    color: white;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+.navbar::before{
+    content: "";
+    background-color:black;
+    position: absolute;
+    height: 100%;
+    width: 200%;
+    z-index: -1;
+    opacity: .4;
+    left: -20px;
+    
+    
+}
+/* Code for the hover over the e-Laborate STARTS  */
+
+ .lnk{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #00ffff;
+    letter-spacing: 5px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.1s;
+    height: 28px;
+    top: 100px;
+    background-color:transparent;
+        
+}
+
+.lnk span{
+    position: absolute;
+    display: block;
+}
+.lnk span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00ffff );
+}
+.lnk:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+    
+}
+
+
+.lnk span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3.5px;
+    background: linear-gradient(270deg, transparent, rgb(255, 0, 200) );
+}
+.lnk:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+}  
+
+/* Code for the hover over the e-Laborate ENDS  */
+/* Code for the hover over the Navbar Menu STARTS */
+
+ul{
+    /* margin: 30px 20px; */
+    padding: 0;
+    display: flex;
+}
+ul li{
+    list-style: none;
+    padding: 4px 10px;
+    
+}
+ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #262626;
+    position: relative;
+    font-weight: bolder;
+}
+ul li a:before{
+    content: "";
+    width: 0;
+    height: 3.5px;
+    background-color: rgb(255, 0, 200);
+    position: absolute;
+    top: 120%;
+    left: 0;
+    transition: .5s;
+    mix-blend-mode: hard-light;
+    
+
+
+}
+ul li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #00ffff;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    transition: .5s;
+    mix-blend-mode: hard-light;
+    
+}
+ul li:hover a:before{
+    width: 50%;
+    transform: translateX(100%);
+    
+}
+
+ul li:hover a:after{
+    width: 50%;
+    transform: translateX(-100%);
+
+}
+
+/* Code for the hover over the Navbar Menu ENDS */
+
+/* Code for the Hamburger Button STARTS */
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    background-color: #a0a0a0;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    background-color: #a0a0a0;
+}
+/* Code for the Hamburger button ENDS */
+
+/* CSS for the Expand and Collapse Card START */
+*{
+    margin: 0;
+    padding: 0;    
+}
+.compliance{
+    /* background: #130f40; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container1{
+    /* width: 1200px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 25px;
+    top: -250px;
+}
+.container1 .card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    max-width: 300px;
+    padding: 20px 15px;
+    margin: 25px 10px;
+    /* box-shadow: 0 5px 200px rgba(0,0,0,0.5); */
+    background: #b8b8b8;
+    transition: 0.3s ease-in-out;
+    border-radius: 7px;
+
+}
+.container1 .card .imgbox{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    top: -50px;
+    /* left: 25px; */
+    /* box-shadow: 0 5px 20px rgba(0,0,0,0.3); */
+
+}
+.container1 .card .imgbox img {
+    position: relative;
+    height: 187px;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-left: 21px;
+    /* margin-top: -29px; */
+    top: 36px;
+    left: 14px;
+}
+.container1 .card .content{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.container1 .card .content h2{
+    font-size: 2em;
+
+}
+.container1 .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay:0.3s;
+}
+.container1 .card:hover {
+    height: 300px;
+
+}
+/* CSS for the Expand and Collapse Card ENDS */
